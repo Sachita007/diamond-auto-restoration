@@ -10,7 +10,6 @@ body.diamond-page {
   --accent-ink: #15598f;
   --on-accent: #fff;
 }
-.draft-notice { padding: 7px 20px; background: #eaf1f8; color: #244463; text-align: center; font-size: 10px; line-height: 1.5; border-bottom: 1px solid #d4dde7; }
 body.diamond-page .section { padding-block: 74px; }
 body.diamond-page .site-header { height: 92px; }
 body.diamond-page .brand img { width: 54px; height: 54px; border-radius: 9px; object-fit: contain; }
