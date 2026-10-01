@@ -4,9 +4,11 @@
   Local preview: run python3 -m http.server 4174 --bind 127.0.0.1 from this directory; open /.
   No build or Super Shine scripts/analytics needed.
   Warranty and certification claims still need Diamond approval before publication.
-  Forms are intentionally local-only for design review; connect Diamond's own form platform
-  before launch, and route to a dedicated thank-you page only on its successful response.
-  Top preview banner removed by request; both forms retain their local-only notice.
+  Both quote placements use Diamond's GHL form GTAlCCv4SFtoIZ1TMQ0A.
+  Parser-loaded eager iframes omit layout wrappers to avoid provider-triggered reloads.
+  Only GHL's verified success message routes to thank-you.html; no Google tracking is installed.
+  GHL Custom CSS removes default wrapper padding/margins; provider resizing keeps every field visible.
+  Success-message boundary check: node diamond-auto-restoration/smoke-ghl-success.mjs from the parent directory.
   Logo/bio: https://www.instagram.com/diamond.auto.restoration/
   Portfolio/coating source: https://www.diamondautorestoration.com/services/ceramic-coating
   Story and gallery photos supplied by the user; full frames retained. Hero photo unchanged.
@@ -31,6 +33,23 @@
   <meta name="description" content="Ceramic coating in Orange, California. Discover Diamond Auto Restoration’s gloss, paint protection, Tesla customer reviews, and real results.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#103f70">
+  <link rel="preconnect" href="https://api.leadconnectorhq.com">
+  <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossorigin>
+  <link rel="preconnect" href="https://link.msgsndr.com">
+  <script>
+    // Register before the eager forms load; never treat a click or resize as success.
+    window.addEventListener('message', event => {
+      if (event.origin !== 'https://api.leadconnectorhq.com' || !Array.isArray(event.data)) return;
+      const frame = [...document.querySelectorAll('iframe.ghl-form-frame')].find(frame => event.source === frame.contentWindow);
+      if (!frame || frame.dataset.formId !== 'GTAlCCv4SFtoIZ1TMQ0A') return;
+      const [action, storageKey, frameId, locationId, fingerprint] = event.data;
+      if (action !== 'set-sticky-contacts' || locationId !== 'Bl44IxhoWBTyvmtlsVUf' ||
+          frameId !== frame.id || storageKey !== `embedded_iframe_${frameId}` ||
+          typeof fingerprint !== 'string' || !fingerprint) return;
+      window.location.assign(new URL('thank-you.html', window.location.href).href);
+    });
+  </script>
+  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
   <title>Ceramic Coating in Orange, CA | Diamond Auto Restoration</title>
   <link rel="icon" href="assets/diamond-auto-restoration-instagram-profile.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +59,7 @@
   <link rel="stylesheet" href="variant-f.css">
   <link rel="stylesheet" href="diamond.css">
   <link rel="stylesheet" href="review-variants.css">
-  <script src="preview.js" defer></script>
+  <script src="site.js" defer></script>
   <script src="review-variants.js" defer></script>
 </head>
 <body class="variant-f diamond-page">
@@ -71,14 +90,12 @@
         <aside class="daylight-card" aria-labelledby="hero-quote-title">
           <h2 id="hero-quote-title">Your shine starts here.</h2>
           <p>Start with your name, number, and vehicle.</p>
-          <form class="quote-form" method="dialog">
-            <label>Full name <span aria-hidden="true">*</span><input name="name" autocomplete="name" placeholder="Your full name" required maxlength="100"></label>
-            <label>Phone number <span aria-hidden="true">*</span><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" required pattern="[+0-9 .\(\)\-]{7,25}" maxlength="25" title="Enter a phone number using 7–25 digits, spaces, or phone punctuation."></label>
-            <label>Car details <span aria-hidden="true">*</span><input name="vehicle" placeholder="Year, make &amp; model" required maxlength="160"></label>
-            <button class="button" type="submit">Request my free quote <span aria-hidden="true">↗</span></button>
-            <p class="form-note">First-copy form only. No request is sent or saved.</p>
-            <p class="form-status" role="status" tabindex="-1" hidden>This is the design first copy. Your request has not been sent. To contact Diamond, call <a href="tel:+17144646757">(714) 464-6757</a> or <a href="https://www.diamondautorestoration.com/contact-us">use the official enquiry page</a>.</p>
-          </form>
+          <iframe class="ghl-form-frame" id="inline-GTAlCCv4SFtoIZ1TMQ0A-0"
+            src="https://api.leadconnectorhq.com/widget/form/GTAlCCv4SFtoIZ1TMQ0A"
+            title="Ceramic Coating — request your free quote" height="439" loading="eager"
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+            data-form-id="GTAlCCv4SFtoIZ1TMQ0A" data-form-name="Ceramic Coating"
+            data-cookie-consent="true" data-cookie-consent-provider="auto"></iframe>
         </aside>
       </div>
     </section>
@@ -207,15 +224,14 @@
       <section id="quote" class="section container" aria-labelledby="quote-title">
         <div class="quote-layout">
           <div class="quote-copy"><span class="eyebrow">YOUR NEXT GREAT FIRST IMPRESSION</span><h2 id="quote-title">Let's make your<br>car shine.</h2><p>Get a free quote for our premium 10-year ceramic coating offer. Tell us a little about your vehicle.</p><div class="discount-offer"><span>UP TO</span><strong>30% <small>OFF</small></strong></div><p>Up to a 10-year warranty. Confirm offer eligibility, vehicle preparation, and warranty terms with the shop.</p><a class="text-link" href="tel:+17144646757">Prefer a conversation? (714) 464-6757 ↗</a></div>
-          <form class="quote-form lower-quote-form" method="dialog">
-            <span class="form-kicker">YOUR FREE QUOTE STARTS HERE</span>
-            <label>Full name <span aria-hidden="true">*</span><input name="name" autocomplete="name" placeholder="Your full name" required maxlength="100"></label>
-            <label>Phone number <span aria-hidden="true">*</span><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" required pattern="[+0-9 .\(\)\-]{7,25}" maxlength="25" title="Enter a phone number using 7–25 digits, spaces, or phone punctuation."></label>
-            <label>Car details <span aria-hidden="true">*</span><input name="vehicle" placeholder="Year, make &amp; model" required maxlength="160"></label>
-            <button class="button" type="submit">Request my free quote <span aria-hidden="true">↗</span></button>
-            <p class="form-note">First-copy form only. No request is sent or saved.</p>
-            <p class="form-status" role="status" tabindex="-1" hidden>This is the design first copy. Your request has not been sent. To contact Diamond, call <a href="tel:+17144646757">(714) 464-6757</a> or <a href="https://www.diamondautorestoration.com/contact-us">use the official enquiry page</a>.</p>
-          </form>
+          <div class="ghl-quote">
+            <iframe class="ghl-form-frame" id="inline-GTAlCCv4SFtoIZ1TMQ0A-1"
+              src="https://api.leadconnectorhq.com/widget/form/GTAlCCv4SFtoIZ1TMQ0A"
+              title="Ceramic Coating — request your free quote" height="439" loading="eager"
+              sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+              data-form-id="GTAlCCv4SFtoIZ1TMQ0A" data-form-name="Ceramic Coating"
+              data-cookie-consent="true" data-cookie-consent-provider="auto"></iframe>
+          </div>
         </div>
       </section>
     </div>

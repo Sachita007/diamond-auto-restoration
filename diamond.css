@@ -72,23 +72,8 @@ body.diamond-page .review-card .google-letter { color: #1764a8; font-size: 24px;
 .review-author small { display: block; color: #596878; font-size: 9px; }
 .review-source { font-size: 9px; color: #15598f; text-decoration: underline; text-underline-offset: 3px; margin-top: 18px; }
 body.diamond-page .quote-layout { gap: 60px; padding: 44px; border-radius: 0; }
-body.diamond-page .lower-quote-form {
-  --bg: #fff;
-  --text: #142231;
-  --muted: #526172;
-  --line: #d4dde7;
-  --accent: #1764a8;
-  --accent-ink: #15598f;
-  --on-accent: #fff;
-  background: var(--bg);
-  color: var(--text);
-  padding: 24px;
-  align-self: start;
-}
-body.diamond-page .lower-quote-form .button { background: #1764a8; color: #fff; }
-body.diamond-page .lower-quote-form .button:hover { background: #104c83; }
-body.diamond-page .quote-form input { border-radius: 0; font-size: 14px; }
-body.diamond-page .quote-form .form-status a { text-decoration: underline; }
+body.diamond-page .ghl-quote { padding: 0; }
+body.diamond-page .ghl-form-frame { min-height: 0; border-radius: 4px; }
 body.diamond-page .faq-list p a { text-decoration: underline; text-underline-offset: 3px; }
 body.diamond-page .site-footer { padding-bottom: 35px; }
 @media (max-width: 1100px) {
@@ -131,8 +116,6 @@ body.diamond-page .site-footer { padding-bottom: 35px; }
   .reviews-toolbar > span { display: none; }
   .review-card { flex-basis: 86%; padding: 22px; }
   body.diamond-page .quote-layout { padding: 26px 20px; gap: 30px; }
-  body.diamond-page .lower-quote-form { padding: 20px; }
-  body.diamond-page .quote-form input { font-size: 16px; }
 }
 @media (max-width: 380px) {
   body.diamond-page .container { padding-inline: 16px; }
