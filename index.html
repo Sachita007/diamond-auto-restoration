@@ -6,7 +6,8 @@
   Warranty and certification claims still need Diamond approval before publication.
   Both quote placements use Diamond's GHL form GTAlCCv4SFtoIZ1TMQ0A.
   Parser-loaded eager iframes omit layout wrappers to avoid provider-triggered reloads.
-  Only GHL's verified success message routes to thank-you.html; no Google tracking is installed.
+  Only GHL's verified success message routes to thank-you.html.
+  Both pages use Diamond's supplied Google Ads AW-17635979577 and GTM-WRN5WH6K tags, not Super Shine's.
   GHL Custom CSS removes default wrapper padding/margins; provider resizing keeps every field visible.
   Success-message boundary check: node diamond-auto-restoration/smoke-ghl-success.mjs from the parent directory.
   Logo/bio: https://www.instagram.com/diamond.auto.restoration/
@@ -50,6 +51,22 @@
     });
   </script>
   <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17635979577"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17635979577');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WRN5WH6K');</script>
+  <!-- End Google Tag Manager -->
   <title>Ceramic Coating in Orange, CA | Diamond Auto Restoration</title>
   <link rel="icon" href="assets/diamond-auto-restoration-instagram-profile.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -255,5 +272,9 @@
     </div>
     <div class="container footer-bottom"><span>Diamond Auto Restoration · Orange, California</span><span>Ceramic coating · First-copy design</span></div>
   </footer>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRN5WH6K"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
