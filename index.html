@@ -13,7 +13,7 @@
   Success-message boundary check: node diamond-auto-restoration/smoke-ghl-success.mjs from the parent directory.
   Logo/bio: https://www.instagram.com/diamond.auto.restoration/
   Portfolio/coating source: https://www.diamondautorestoration.com/services/ceramic-coating
-  Story and gallery photos supplied by the user; full frames retained. Hero photo unchanged.
+  Story and gallery photos supplied by the user; full frames retained. The gallery is unchanged by the hero update.
   Google listing: https://share.google/E1xnnieaKPSy0a0ZR
   Eight sourced coating reviews; five Tesla-associated through wording or source photos.
   Edit index.html directly. Featured-review comparison and generator have been removed.
@@ -23,6 +23,12 @@
   Native swipe and keyboard navigation stop at the eight real reviews; no duplicate cards.
   Browser regression check: await (await import('./smoke-review-carousel.js')).checkReviewCarousel()
   Each reviewer links to their individual Google Maps review, verified against Google's share data.
+  Review photos: compared 30 attachments across the eight exact Google reviews, matched by reviewer on 2026-10-02.
+  Selected source photo numbers: Oliver Wong 1, Emman 1, Andre Abboud 3, Chang Alina 3, Hosh 4,
+  David Rothman 1, Laura Rodriguez-Gomez 1, Roy David 1. Each card retains its verified individual review link.
+  Local optimized WebP photos fill consistent 4:3 frames; Andre and Laura have adjusted crop positions.
+  The user-supplied Porsche photo (igexport-DdcsZVMmYjr.jpg) is the hero background only; the portfolio gallery remains unchanged.
+  User approved publishing the Porsche hero and matched review-photo updates on 2026-10-02.
   Hero/scroll entrances and hover effects respect reduced motion; content stays visible without JS.
   Public design preview: https://sachita007.github.io/diamond-auto-restoration/
   Publish only this directory to the standalone Sachita007/diamond-auto-restoration repository.
@@ -95,7 +101,7 @@
 
   <main id="main">
     <section class="daylight-hero" aria-labelledby="daylight-title">
-      <img class="daylight-backdrop" src="assets/ceramic-car-01.jpg" alt="" width="1440" height="1800" fetchpriority="high">
+      <img class="daylight-backdrop" src="assets/hero-porsche.webp" alt="" width="1920" height="2398" fetchpriority="high">
       <div class="container daylight-grid">
         <div class="daylight-copy">
           <span class="eyebrow">LIMITED-TIME OFFER · ORANGE, CA</span>
@@ -177,48 +183,56 @@
             <div id="review-track" class="review-track" role="region" aria-label="Ceramic coating customer reviews" aria-describedby="reviews-help" tabindex="0">
           <article class="review-card" aria-label="Review 1 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-oliver-wong.webp" alt="Tesla Model 3 photographed by Oliver Wong in his Google review" width="600" height="800" loading="lazy" decoding="async">
             <blockquote>“Bryan did an awesome job with getting my Tesla Model 3 ceramic coated. The one step polish he did really helped bring out the paint shine and even better than factory when I had picked it up few weeks back. Car looks like glass under the sun.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">OW</span><div><strong>Oliver Wong</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25wS2JUSlVlV3d0YnpSRlVXRjVSRzVEUlVsbE1FRRAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOnpKbTJUeWwtbzRFUWF5RG5DRUllMEE%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 2 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-emman.webp" alt="Blue Tesla photographed by Emman in their Google review" width="800" height="600" loading="lazy" decoding="async">
             <blockquote>“Excellent service. Communication is great. The ceramic coat on my tesla adds that luster the original paint didn't have. I searched and compared different shops and decided on Diamond Auto Restoration. It was a very good choice.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">E</span><div><strong>Emman</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kRWJWcDFRbUZPVFhsdGEzaEdZakJXTTFNek1tYxAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOndEbVp1QmFOTXlta3hGYjBWM1MzMmc%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 3 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-andre-abboud.webp" alt="White Tesla photographed by Andre Abboud in his Google review" width="600" height="800" loading="lazy" decoding="async" style="object-position: center 30%">
             <blockquote>“He communicates clearly, is extremely helpful, and has deep knowledge of ceramic coating application. I truly enjoyed our conversation about the process and learned a great deal from him. As you can see from the enclosed photos, my car looks incredible—the shine is showroom-worthy and simply magnificent.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">AA</span><div><strong>Andre Abboud</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tWU0xYVlNOVXRDZVdkWFgweFBRMUZOVUhremRIYxAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOkVSLXVSNUtCeWdXX0xPQ1FNUHkzdHc%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 4 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-chang-alina.webp" alt="White BMW X7 photographed by Chang Alina in their Google review" width="600" height="800" loading="lazy" decoding="async">
             <blockquote>“I brought my X7 to Diamond Auto Restoration for ceramic coating, and I couldn't be happier with the results. Bryan provided excellent service from start to finish — he took the time to clearly explain his process, answered all my questions, and showed genuine care for the quality of his work.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">CA</span><div><strong>Chang Alina</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xZMFMxaFJaelUzYlRoVFlTMUlWRVJGUXpkaE1HYxAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOlY0S1hRZzU3bThTYS1IVERFQzdhMGc%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 5 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-hosh.webp" alt="Red Tesla photographed by Hosh in their Google review" width="800" height="600" loading="lazy" decoding="async">
             <blockquote>“From the moment I dropped off my car, I could tell I was in good hands. He’s incredibly detail oriented, patient, and takes real pride in his work! The ceramic coating process was meticulous.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">H</span><div><strong>Hosh</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnTUNZMUllWVdnEAE!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CIHM0ogKEICAgMCY1IeYWg%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 6 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-david-rothman.webp" alt="Red Tesla photographed by David Rothman in his Google review" width="600" height="800" loading="lazy" decoding="async">
             <blockquote>“Diamond Auto Restoration was my choice for a coating of ceramic wax. I purchased a new Tesla and needed the treatment rapidly. I received a quote, accepted it and dropped my Tesla at their location. Four hours later I picked it up.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">DR</span><div><strong>David Rothman</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2poQmNHOHdkRjh5WVZkZk1GcHRlWEpNU25sVlVFRRAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOjhBcG8wdF8yYVdfMFpteXJMSnlVUEE%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 7 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-laura-rodriguez-gomez.webp" alt="Honda Pilot photographed by Laura Rodriguez-Gomez in her Google review" width="600" height="800" loading="lazy" decoding="async" style="object-position: center 60%">
             <blockquote>“I recently had my Honda Pilot ceramic coated at this establishment, and the results exceeded my expectations. From start to finish, the team was professional, knowledgeable, and took the time to explain the process and benefits of ceramic coating.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">LR</span><div><strong>Laura Rodriguez-Gomez</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pKRWVIQkxRazlIVFY5M1MxVkhURFZTYm1seVVuYxAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOjJEeHBLQk9HTV93S1VHTDVSbmlyUnc%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>
           </article>
           <article class="review-card" aria-label="Review 8 of 8">
             <div class="review-top"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span class="google-letter" aria-hidden="true">G</span></div>
+            <img class="review-photo" src="assets/review-roy-david.webp" alt="Gray Tesla photographed by Roy David in his Google review" width="600" height="800" loading="lazy" decoding="async">
             <blockquote>“Love the result of the ceramic coating by Diamond Auto Restoration. They have their own shop that you go to and not someone that comes to your place and do it outside.”</blockquote>
             <div class="review-author"><span class="avatar" aria-hidden="true">RD</span><div><strong>Roy David</strong><small>Google review · Ceramic coating</small></div></div>
             <a class="review-source" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tWelJHVlhVbVZuZVhaTU1EVlliR2gwYW5kclgzYxAB!2m1!1s0x0:0xcd00a40884d2c990!3m1!1s2@1:CAIQACodChtycF9oOkVzRGVXUmVneXZMMDVYbGh0andrX3c%7C%7C?hl=en-GB" target="_blank" rel="noopener noreferrer">Read review on Google ↗</a>

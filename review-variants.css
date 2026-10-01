@@ -16,6 +16,7 @@
 .review-card:first-child { margin-left: calc(var(--peek) + var(--review-gap)); }
 .review-card:last-child { margin-right: calc(var(--peek) + var(--review-gap)); }
 .review-top { margin-bottom: 18px; }
+.review-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: #eef3f8; border-radius: 6px; margin-bottom: 18px; }
 .review-top .stars { font-size: 15px; letter-spacing: 2px; }
 .review-card blockquote { font-size: 14px; line-height: 1.75; margin-bottom: 24px; }
 .review-author { padding-top: 18px; border-top: 1px solid #e8eef4; }
