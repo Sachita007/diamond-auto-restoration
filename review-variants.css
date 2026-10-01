@@ -44,8 +44,14 @@
   .review-summary > strong { font-size: 24px; }
   .review-summary .stars { font-size: 13px; }
   .review-summary > a { font-size: 11px; }
-  .review-carousel { --visible-cards: 1; --peek: 28px; --review-gap: 12px; }
-  .review-version-cards .review-card { padding: 22px 18px; }
+  /* Compact mobile cards keep the full review and source link visible without clipping. */
+  .review-carousel { --visible-cards: 1; --peek: 20px; --review-gap: 10px; }
+  .review-version-cards .review-card { padding: 16px 14px; }
+  .review-top { margin-bottom: 10px; }
+  .review-photo { height: min(150px, 22svh); margin-bottom: 12px; }
+  .review-card blockquote { font-size: 13px; line-height: 1.55; margin-bottom: 14px; }
+  .review-author { padding-top: 12px; }
+  .review-source { margin-top: 10px; }
   .review-controls [data-review-step="-1"] { margin-left: 0; }
   .review-controls [data-review-step="1"] { margin-right: 0; }
   .reviews-toolbar p { font-size: 10px; }
