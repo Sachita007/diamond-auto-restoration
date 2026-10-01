@@ -1,0 +1,100 @@
+/* F — Daylight Studio: light/dark contrast, lime accents, source-page hero photography. */
+body.variant-f {
+  --bg: #fff;
+  --surface: #f4f4f4;
+  --text: #151515;
+  --muted: #555;
+  --line: #d6d6d6;
+  --accent: #dbfa35;
+  --accent-ink: #485b00;
+  --on-accent: #171916;
+  color-scheme: light;
+}
+body.variant-f .site-header { border-bottom: 1px solid var(--line); }
+body.variant-f img, body.variant-f .portfolio-grid figure:hover img { filter: none; }
+body.variant-f .daylight-hero { position: relative; isolation: isolate; background: #f1f3ef; border-bottom: 1px solid var(--line); }
+body.variant-f .daylight-backdrop { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+body.variant-f .daylight-hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #fffffff0 0%, #ffffffd6 40%, #ffffff66 75%, #ffffff40 100%); }
+body.variant-f .daylight-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: 74px; padding-block: 42px; }
+/* Center a narrower offer block at every two-column width; mobile stays full-width. */
+body.variant-f .daylight-copy { width: 88%; max-width: 520px; justify-self: center; }
+body.variant-f .daylight-copy .eyebrow { font-size: 9px; margin-bottom: 23px; }
+body.variant-f .daylight-copy h1 { font-size: clamp(40px, 4.1vw, 58px); line-height: 1.08; font-weight: 600; }
+body.variant-f .daylight-copy h1 span { color: var(--accent-ink); }
+body.variant-f .daylight-offer { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin: 22px 0; }
+body.variant-f .daylight-offer > strong { font-size: 122px; line-height: 1; letter-spacing: -.085em; font-weight: 600; }
+body.variant-f .daylight-offer s { display: block; color: #555; font-size: 16px; margin-bottom: 9px; }
+body.variant-f .daylight-offer > div > span { display: inline-block; background: var(--accent); color: var(--on-accent); font-size: 10px; font-weight: 700; letter-spacing: .08em; padding: 4px 9px; }
+body.variant-f .daylight-copy > p { max-width: 400px; font-size: 13px; line-height: 1.85; margin-bottom: 26px; color: #414141; }
+body.variant-f .hero-assurance { color: #414141; }
+body.variant-f .daylight-card { min-width: 0; padding: 28px; background: #fff; border: 1px solid #d0d0d0; box-shadow: 0 16px 50px #00000012; }
+body.variant-f .daylight-card h2 { font-size: 27px; line-height: 1.2; font-weight: 600; }
+body.variant-f .daylight-card > p { font-size: 11px; margin: 10px 0 22px; }
+body.variant-f .ghl-form-frame { display: block; width: 100%; border: 0; background: #fff; }
+body.variant-f .ghl-quote { min-width: 0; align-self: start; padding: 24px 12px; background: #fff; }
+body.variant-f :is(#hero-quote, .ghl-quote) { min-height: 390px; }
+body.variant-f .button { border-radius: 0; }
+body.variant-f .button:hover { background: #ccea2c; }
+body.variant-f .google-letter { color: var(--text); }
+body.variant-f .studio-trust { border-top: 0; }
+body.variant-f .studio-statement { background: var(--surface); }
+body.variant-f #portfolio { border-top: 1px solid var(--line); }
+/* Preserve each gallery photo's full frame instead of cropping to a fixed height. */
+body.variant-f .portfolio-grid img { height: auto; }
+body.variant-f .benefit { background: #fff; }
+body.variant-f .quote-layout { background: var(--surface); }
+body.variant-f .daylight-dark, body.variant-f .site-footer {
+  --bg: #171916;
+  --surface: #21241e;
+  --text: #f7f8f1;
+  --muted: #bec3b7;
+  --line: #3d4436;
+  --accent-ink: #dbfa35;
+  background: var(--bg);
+  color: var(--text);
+}
+body.variant-f .daylight-story { padding-top: 54px; }
+body.variant-f .studio-trust strong { color: var(--accent); }
+body.variant-f :is(.eyebrow, .benefit-icon, .reason-number, .stars, .quote-price small) { color: var(--accent-ink); }
+body.variant-f summary::after, body.variant-f .hero-assurance span::before, body.variant-f .text-link:hover { color: var(--accent-ink); }
+body.variant-f :is(a, button, iframe, summary):focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 5px; }
+@media (max-width: 1000px) {
+  body.variant-f .daylight-grid { gap: 30px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  body.variant-f .daylight-copy h1 { font-size: clamp(30px, 4.1vw, 40px); }
+  body.variant-f .daylight-card { padding: 24px; }
+  body.variant-f .daylight-offer { gap: 16px; }
+  body.variant-f .daylight-offer > strong { font-size: 100px; }
+  body.variant-f .daylight-offer s { font-size: 13px; }
+}
+@media (max-width: 760px) {
+  /* Keep tap-to-call in the mobile header instead of duplicate navigation. */
+  body.variant-f .menu-toggle { display: none; }
+  body.variant-f .header-call { display: inline-flex; align-items: center; flex-shrink: 0; min-height: 44px; white-space: nowrap; font-size: 12px; }
+  body.variant-f .daylight-grid { grid-template-columns: minmax(0, 1fr); gap: 25px; padding-block: 28px; }
+  body.variant-f .daylight-copy { width: 100%; max-width: none; }
+  body.variant-f .daylight-hero::before { background: linear-gradient(90deg, #fffffff2 0%, #ffffffb3 55%, #ffffff66 100%); }
+  body.variant-f .daylight-backdrop { height: 340px; object-position: 45% center; mask-image: linear-gradient(#000 80%, transparent); }
+  body.variant-f .daylight-copy .eyebrow { font-size: 8px; margin-bottom: 17px; }
+  body.variant-f .daylight-copy h1 { font-size: clamp(30px, 8.5vw, 43px); }
+  body.variant-f .daylight-offer { margin: 16px 0; gap: 19px; }
+  body.variant-f .daylight-offer > strong { font-size: 90px; }
+  body.variant-f .daylight-offer s { font-size: 14px; }
+  body.variant-f .daylight-copy > p { font-size: 12px; margin-bottom: 0; max-width: 400px; }
+  body.variant-f .daylight-copy .hero-buttons, body.variant-f .daylight-copy .hero-assurance { display: none; }
+  body.variant-f .daylight-card { padding: 24px 20px; }
+  body.variant-f .daylight-card h2 { font-size: 26px; }
+}
+@media (max-width: 380px) {
+  body.variant-f .site-header { gap: 8px; }
+  body.variant-f .site-header .brand { gap: 6px; }
+  body.variant-f .site-header .brand img { width: 32px; height: 32px; }
+  body.variant-f .site-header .brand > span { font-size: 11px; }
+  body.variant-f .site-header .brand small { font-size: 6px; }
+  body.variant-f .header-call { font-size: 11px; }
+  body.variant-f .phone-symbol { width: 22px; height: 22px; margin-right: 5px; }
+  body.variant-f .daylight-offer { gap: 13px; }
+  body.variant-f .daylight-offer > strong { font-size: 82px; }
+  body.variant-f .daylight-offer s { font-size: 12px; }
+  body.variant-f .daylight-card { padding: 22px 16px; }
+  body.variant-f .daylight-card h2 { font-size: 24px; }
+}
