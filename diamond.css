@@ -72,7 +72,7 @@ body.diamond-page .review-card .google-letter { color: #1764a8; font-size: 24px;
 .review-author small { display: block; color: #596878; font-size: 9px; }
 .review-source { font-size: 9px; color: #15598f; text-decoration: underline; text-underline-offset: 3px; margin-top: 18px; }
 body.diamond-page .quote-layout { gap: 60px; padding: 44px; border-radius: 0; }
-body.diamond-page .ghl-quote { padding: 0; }
+body.diamond-page .ghl-quote { padding: 24px; border: 1px solid #c8d3df; border-top: 3px solid #1764a8; }
 body.diamond-page .ghl-form-frame { min-height: 0; border-radius: 4px; }
 body.diamond-page .faq-list p a { text-decoration: underline; text-underline-offset: 3px; }
 body.diamond-page .site-footer { padding-bottom: 35px; }
@@ -116,6 +116,7 @@ body.diamond-page .site-footer { padding-bottom: 35px; }
   .reviews-toolbar > span { display: none; }
   .review-card { flex-basis: 86%; padding: 22px; }
   body.diamond-page .quote-layout { padding: 26px 20px; gap: 30px; }
+  body.diamond-page .ghl-quote { padding: 20px; }
 }
 @media (max-width: 380px) {
   body.diamond-page .container { padding-inline: 16px; }
